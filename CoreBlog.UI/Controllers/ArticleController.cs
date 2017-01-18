@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CoreBlog.UI.Controllers
 {
-    public class ArticleController : Controller
+    public class ArticleController : BaseController
     {
         #region 文章编辑
 
@@ -17,7 +17,7 @@ namespace CoreBlog.UI.Controllers
         #endregion
 
         #region 修改文章
-        public IActionResult ArticleOpertionView()
+        public IActionResult ArticleOperationView()
         {
             return View();
         }

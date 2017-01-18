@@ -8,12 +8,26 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CoreBlog.UI.Controllers
 {
-    public class MemberController : Controller
+    public class MemberController : BaseController
     {
         // GET: /<controller>/
-        public IActionResult Index()
+        public IActionResult Login()
         {
             return View();
         }
+
+        #region 注册
+        public IActionResult Register()
+        {
+            return View();
+        }
+        #endregion
+
+        #region 个人资料编辑
+        public IActionResult UserInformationOperation()
+        {
+            return View();
+        }
+        #endregion
     }
 }

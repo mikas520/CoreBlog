@@ -65,7 +65,7 @@ namespace CoreBlog.Back.UI
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Member}/{action=Help}/{id?}");
             });
         }
     }

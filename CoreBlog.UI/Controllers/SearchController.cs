@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CoreBlog.UI.Controllers
 {
-    public class SearchController : Controller
+    public class SearchController : BaseController
     {
         // GET: /<controller>/
         public IActionResult Index()

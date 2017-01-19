@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CoreBlog.Respository.IRespository
+namespace CoreBlog.Model
 {
-    public class IMemberRespository
+    public class MongoObject
     {
+        public string _id { get; set; }
     }
 }

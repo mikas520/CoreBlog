@@ -8,10 +8,10 @@ using MongoDB.Driver;
 
 namespace CoreBlog.Respository
 {
-    public class MongoDBConnection
+    internal class MongoDBConnection
     { 
-        public static readonly string configconnectionString = "";
-        public static readonly string configDBName = "";
+        private static readonly string configconnectionString = "";
+        private static readonly string configDBName = "";
 
         /// <summary>
         /// 获取数据库

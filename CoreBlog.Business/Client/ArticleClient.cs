@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CoreBlog.Respository.IRespository
+namespace CoreBlog.Business.Client
 {
-    public class IMemberRespository
+    public class ArticleClient
     {
     }
 }

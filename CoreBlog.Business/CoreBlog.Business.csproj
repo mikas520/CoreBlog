@@ -40,6 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Client\ArticleClient.cs" />
+    <Compile Include="Client\MemberClient.cs" />
+    <Compile Include="IClient\IArticleClient.cs" />
+    <Compile Include="IClient\IMemberClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

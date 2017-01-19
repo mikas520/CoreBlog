@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CoreBlog.Respository.IRespository
 {
-    class ISearchRespository
+    public class ISearchRespository
     {
     }
 }

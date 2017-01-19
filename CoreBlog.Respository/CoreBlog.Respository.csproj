@@ -64,12 +64,18 @@
     <Compile Include="IRespository\IMemberRespository.cs" />
     <Compile Include="IRespository\ISearchRespository.cs" />
     <Compile Include="MongoDBConnection.cs" />
+    <Compile Include="MongoDBHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Respository\ArticleRespository.cs" />
     <Compile Include="Respository\SearchRespository.cs" />
     <Compile Include="Respository\MemberRespository.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\CoreBlog.Model\CoreBlog.Model.csproj">
+      <Project>{8F2D14AA-2E6B-4971-AE4A-3DB15594DB95}</Project>
+      <Name>CoreBlog.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>

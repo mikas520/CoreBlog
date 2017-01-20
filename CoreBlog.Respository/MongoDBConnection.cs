@@ -1,17 +1,15 @@
-﻿using System;
+﻿using MongoDB.Driver;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using System.Configuration;
-using MongoDB.Driver;
 
 namespace CoreBlog.Respository
 {
     internal class MongoDBConnection
-    { 
-        private static readonly string configconnectionString = "";
-        private static readonly string configDBName = "";
+    {
+        private static readonly string configconnectionString = "mongodb://127.0.0.1:27017";
+        private static readonly string configDBName = "CoreBlog";
 
         /// <summary>
         /// 获取数据库
@@ -19,14 +17,14 @@ namespace CoreBlog.Respository
         /// <returns></returns>
         public static IMongoDatabase GetDatabase()
         {
-           return GetDatabase(configconnectionString,configDBName);
+            return GetDatabase(configconnectionString, configDBName);
         }
 
         /// <summary>
         /// 获取数据库
         /// </summary>
         /// <returns></returns>
-        public static IMongoDatabase GetDatabase(string connectionString,string dbName)
+        public static IMongoDatabase GetDatabase(string connectionString, string dbName)
         {
             var client = new MongoClient(connectionString);
             if (client == null)
@@ -34,4 +32,5 @@ namespace CoreBlog.Respository
             return client.GetDatabase(dbName);
         }
     }
+
 }

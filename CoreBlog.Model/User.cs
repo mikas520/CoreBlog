@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace CoreBlog.Model
 {
-    public class User
+    public class User : BaseModel
     {
         /// <summary>
         /// 昵称
@@ -61,5 +60,6 @@ namespace CoreBlog.Model
         /// 登录IP
         /// </summary>
         public string LoginIP { get; set; }
+
     }
 }

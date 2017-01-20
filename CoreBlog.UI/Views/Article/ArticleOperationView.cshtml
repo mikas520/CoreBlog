@@ -1,19 +1,21 @@
-﻿<div class="am-g am-g-fixed blog-g-fixed">
+﻿@using CoreBlog.Model;
+<div class="am-g am-g-fixed blog-g-fixed">
     <div class="am-u-md-8">
-        <form action="" class="am-form" id="ue-form">
+        <form action="ArticleOperationSave" method="post" class="am-form" id="ue-form">
             <fieldset>
                 <legend>文章</legend>
                 <div class="am-form-group">
-                    <label for="doc-vld-name-2">标题：</label>
-                    <input type="text" id="doc-vld-name-2" minlength="3" placeholder="输入标题（至少 3 个字符）" required />
+                    <label for="Title">标题：</label>
+                     <input type="hidden" name="ID" value="@Model._id" />
+                    <input type="text" id="Title"  value="@Model.Title" name="Title" minlength="3" placeholder="输入标题（至少 3 个字符）" required />
                 </div>
                 <div class="am-form-group">
-                    <label for="doc-vld-name-2">标签：</label>
-                    <input type="text" id="doc-vld-name-2" minlength="3" placeholder="使用英文逗号,分割" required />
+                    <label for="Tag">标签：</label>
+                    <input type="text" id="Tag" name="Tag"  value="@Model.Tag" minlength="3" placeholder="使用英文逗号,分割" required />
                 </div>
                 <div class="am-form-group">
                     <label for="doc-vld-ta-2">内容：</label>
-                    <textarea class="am-validate" name="myue" id="myue" required></textarea>
+                    <textarea class="am-validate" name="Content"  value="@Model.Content" id="Content" required></textarea>
                 </div>
 
                 <button class="am-btn am-btn-secondary" type="submit">提交</button>

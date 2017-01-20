@@ -1,5 +1,5 @@
---temp-output:E:\Programme\CoreBlog\CoreBlog.UI\obj\Debug\netcoreapp1.0\
---out:E:\Programme\CoreBlog\CoreBlog.UI\bin\Debug\netcoreapp1.0\CoreBlog.UI.dll
+--temp-output:D:\CoreBlog\CoreBlog.UI\obj\Debug\netcoreapp1.0\
+--out:D:\CoreBlog\CoreBlog.UI\bin\Debug\netcoreapp1.0\CoreBlog.UI.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -97,6 +97,10 @@
 --reference:C:\Users\Administrator\.nuget\packages\Microsoft.VisualStudio.Web.BrowserLink.Loader\14.0.0\lib\netstandard1.5\Microsoft.VisualStudio.Web.BrowserLink.Loader.dll
 --reference:C:\Users\Administrator\.nuget\packages\Microsoft.Win32.Primitives\4.0.1\ref\netstandard1.3\Microsoft.Win32.Primitives.dll
 --reference:C:\Users\Administrator\.nuget\packages\Microsoft.Win32.Registry\4.0.0\ref\netstandard1.3\Microsoft.Win32.Registry.dll
+--reference:C:\Users\Administrator\.nuget\packages\mongocsharpdriver\2.4.1\lib\netstandard1.5\MongoDB.Driver.Legacy.dll
+--reference:C:\Users\Administrator\.nuget\packages\MongoDB.Bson\2.4.1\lib\netstandard1.5\MongoDB.Bson.dll
+--reference:C:\Users\Administrator\.nuget\packages\MongoDB.Driver\2.4.1\lib\netstandard1.5\MongoDB.Driver.dll
+--reference:C:\Users\Administrator\.nuget\packages\MongoDB.Driver.Core\2.4.1\lib\netstandard1.5\MongoDB.Driver.Core.dll
 --reference:C:\Users\Administrator\.nuget\packages\Newtonsoft.Json\9.0.1\lib\netstandard1.0\Newtonsoft.Json.dll
 --reference:C:\Users\Administrator\.nuget\packages\NuGet.Common\3.5.0-beta2-1484\lib\netstandard1.3\NuGet.Common.dll
 --reference:C:\Users\Administrator\.nuget\packages\NuGet.Configuration\3.5.0-beta2-1484\lib\netstandard1.3\NuGet.Configuration.dll
@@ -118,6 +122,7 @@
 --reference:C:\Users\Administrator\.nuget\packages\System.Collections.Concurrent\4.0.12\ref\netstandard1.3\System.Collections.Concurrent.dll
 --reference:C:\Users\Administrator\.nuget\packages\System.Collections.Immutable\1.2.0\lib\netstandard1.0\System.Collections.Immutable.dll
 --reference:C:\Users\Administrator\.nuget\packages\System.Collections.NonGeneric\4.0.1\ref\netstandard1.3\System.Collections.NonGeneric.dll
+--reference:C:\Users\Administrator\.nuget\packages\System.Collections.Specialized\4.0.1\ref\netstandard1.3\System.Collections.Specialized.dll
 --reference:C:\Users\Administrator\.nuget\packages\System.ComponentModel\4.0.1\ref\netstandard1.0\System.ComponentModel.dll
 --reference:C:\Users\Administrator\.nuget\packages\System.ComponentModel.Annotations\4.1.0\ref\netstandard1.4\System.ComponentModel.Annotations.dll
 --reference:C:\Users\Administrator\.nuget\packages\System.ComponentModel.Primitives\4.1.0\ref\netstandard1.0\System.ComponentModel.Primitives.dll
@@ -129,6 +134,7 @@
 --reference:C:\Users\Administrator\.nuget\packages\System.Diagnostics.Process\4.1.0\ref\netstandard1.4\System.Diagnostics.Process.dll
 --reference:C:\Users\Administrator\.nuget\packages\System.Diagnostics.StackTrace\4.0.1\ref\netstandard1.3\System.Diagnostics.StackTrace.dll
 --reference:C:\Users\Administrator\.nuget\packages\System.Diagnostics.Tools\4.0.1\ref\netstandard1.0\System.Diagnostics.Tools.dll
+--reference:C:\Users\Administrator\.nuget\packages\System.Diagnostics.TraceSource\4.0.0\ref\netstandard1.3\System.Diagnostics.TraceSource.dll
 --reference:C:\Users\Administrator\.nuget\packages\System.Diagnostics.Tracing\4.1.0\ref\netstandard1.5\System.Diagnostics.Tracing.dll
 --reference:C:\Users\Administrator\.nuget\packages\System.Dynamic.Runtime\4.0.11\ref\netstandard1.3\System.Dynamic.Runtime.dll
 --reference:C:\Users\Administrator\.nuget\packages\System.Globalization\4.0.11\ref\netstandard1.3\System.Globalization.dll
@@ -182,6 +188,7 @@
 --reference:C:\Users\Administrator\.nuget\packages\System.Security.Cryptography.X509Certificates\4.1.0\ref\netstandard1.4\System.Security.Cryptography.X509Certificates.dll
 --reference:C:\Users\Administrator\.nuget\packages\System.Security.Principal\4.0.1\ref\netstandard1.0\System.Security.Principal.dll
 --reference:C:\Users\Administrator\.nuget\packages\System.Security.Principal.Windows\4.0.0\ref\netstandard1.3\System.Security.Principal.Windows.dll
+--reference:C:\Users\Administrator\.nuget\packages\System.Security.SecureString\4.0.0\ref\netstandard1.3\System.Security.SecureString.dll
 --reference:C:\Users\Administrator\.nuget\packages\System.Text.Encoding\4.0.11\ref\netstandard1.3\System.Text.Encoding.dll
 --reference:C:\Users\Administrator\.nuget\packages\System.Text.Encoding.Extensions\4.0.11\ref\netstandard1.3\System.Text.Encoding.Extensions.dll
 --reference:C:\Users\Administrator\.nuget\packages\System.Text.Encodings.Web\4.0.0\lib\netstandard1.0\System.Text.Encodings.Web.dll
@@ -196,10 +203,13 @@
 --reference:C:\Users\Administrator\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\Administrator\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\Administrator\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
---resource:"E:\Programme\CoreBlog\CoreBlog.UI\obj\Debug\netcoreapp1.0\CoreBlog.UIdotnet-compile.deps.json",CoreBlog.UI.deps.json
-E:\Programme\CoreBlog\CoreBlog.UI\Program.cs
-E:\Programme\CoreBlog\CoreBlog.UI\Startup.cs
-E:\Programme\CoreBlog\CoreBlog.UI\Controllers\ArticleController.cs
-E:\Programme\CoreBlog\CoreBlog.UI\Controllers\BaseController.cs
-E:\Programme\CoreBlog\CoreBlog.UI\Controllers\MemberController.cs
-E:\Programme\CoreBlog\CoreBlog.UI\Controllers\SearchController.cs
+--reference:D:\CoreBlog\CoreBlog.Business\bin\Debug\netstandard1.6\CoreBlog.Business.dll
+--reference:D:\CoreBlog\CoreBlog.Model\bin\Debug\netstandard1.6\CoreBlog.Model.dll
+--reference:D:\CoreBlog\CoreBlog.Respository\bin\Debug\netstandard1.6\CoreBlog.Respository.dll
+--resource:"D:\CoreBlog\CoreBlog.UI\obj\Debug\netcoreapp1.0\CoreBlog.UIdotnet-compile.deps.json",CoreBlog.UI.deps.json
+D:\CoreBlog\CoreBlog.UI\Program.cs
+D:\CoreBlog\CoreBlog.UI\Startup.cs
+D:\CoreBlog\CoreBlog.UI\Controllers\ArticleController.cs
+D:\CoreBlog\CoreBlog.UI\Controllers\BaseController.cs
+D:\CoreBlog\CoreBlog.UI\Controllers\MemberController.cs
+D:\CoreBlog\CoreBlog.UI\Controllers\SearchController.cs

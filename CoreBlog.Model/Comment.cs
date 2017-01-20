@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace CoreBlog.Model
 {
-    public class Comment
+    public class Comment : BaseModel
     {
         /// <summary>
         /// 文章ID
@@ -16,7 +15,7 @@ namespace CoreBlog.Model
         /// <summary>
         /// 用户ID
         /// </summary>
-        public string UserID { get; set;}
+        public string UserID { get; set; }
 
         /// <summary>
         /// 创建时间
@@ -32,5 +31,7 @@ namespace CoreBlog.Model
         /// 评论内容
         /// </summary>
         public string Content { get; set; }
+
+
     }
 }

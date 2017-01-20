@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using CoreBlog.Business.IClient;
+using CoreBlog.Business.Client;
 
 namespace CoreBlog.UI
 {
@@ -35,7 +37,7 @@ namespace CoreBlog.UI
         {
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
-
+            services.AddSingleton<IArticleClient, ArticleClient>();
             services.AddMvc();
         }
 

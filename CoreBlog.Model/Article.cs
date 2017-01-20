@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace CoreBlog.Model
 {
-    public class Article
+    public class Article:BaseModel
     {
         /// <summary>
         /// 用户ID
@@ -41,11 +40,11 @@ namespace CoreBlog.Model
         /// <summary>
         /// 游览人数
         /// </summary>
-        public string Watch { get; set; }
+        public int Watch { get; set; }
         /// <summary>
         /// 喜欢人数
         /// </summary>
-        public int Like{ get; set; }
+        public int Like { get; set; }
 
         /// <summary>
         /// 不喜欢人数

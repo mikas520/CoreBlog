@@ -1,4 +1,5 @@
 ﻿using CoreBlog.Model;
+using CoreBlog.Model.Query;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace CoreBlog.Respository.IRespository
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        long DeleteArticleByID(string id);
+        long DeleteArticleByID(long id);
         
         /// <summary>
         /// 修改
@@ -30,12 +31,12 @@ namespace CoreBlog.Respository.IRespository
         /// <summary>
         /// 使用ID查询
         /// </summary>
-        Article FindArticleByID(string id);
+        Article FindArticleByID(long id);
         
         /// <summary>
         /// 分页查询
         /// </summary>
-        KeyValuePair<long, IList<Article>> FindArticleByPage(int size, int page);
+        KeyValuePair<long, IList<Article>> FindArticleByPage(BaseQuery query);
     }
 
 }

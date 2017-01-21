@@ -1,12 +1,12 @@
 ﻿@using CoreBlog.Model;
 <div class="am-g am-g-fixed blog-g-fixed">
     <div class="am-u-md-8">
-        <form action="ArticleOperationSave" method="post" class="am-form" id="ue-form">
+        <form action="@Url.Action("ArticleOperationSave")" method="post" class="am-form" id="ue-form">
             <fieldset>
                 <legend>文章</legend>
                 <div class="am-form-group">
                     <label for="Title">标题：</label>
-                     <input type="hidden" name="ID" value="@Model._id" />
+                     <input type="hidden" name="_id" value="@Model._id" />
                     <input type="text" id="Title"  value="@Model.Title" name="Title" minlength="3" placeholder="输入标题（至少 3 个字符）" required />
                 </div>
                 <div class="am-form-group">

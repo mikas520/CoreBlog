@@ -19,7 +19,7 @@ namespace CoreBlog.Business.IClient
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        long DeleteArticleByID(string id);
+        long DeleteArticleByID(long id);
 
         /// <summary>
         /// 修改
@@ -30,7 +30,7 @@ namespace CoreBlog.Business.IClient
         /// <summary>
         /// 使用ID查询
         /// </summary>
-        Article FindArticleByID(string id);
+        Article FindArticleByID(long id);
 
         /// <summary>
         /// 分页查询

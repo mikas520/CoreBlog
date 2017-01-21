@@ -24,10 +24,10 @@ namespace CoreBlog.UI.Controllers
         #endregion
 
         #region 修改文章
-        public IActionResult ArticleOperationView(string id="")
+        public IActionResult ArticleOperationView(long id =0)
         {
             Article model = null;
-            if (!string.IsNullOrEmpty(id))
+            if (id>0)
             {
                model= _articleClient.FindArticleByID(id);
             }
@@ -37,8 +37,8 @@ namespace CoreBlog.UI.Controllers
         {
             var article = new Article()
             {
-                Content = Request.Form["Title"].ToString() ?? string.Empty,
-                _id = Guid.NewGuid().ToString("N"),
+                _id = Convert.ToInt64(Request.Form["_id"]),
+                Content = Request.Form["Content"].ToString() ?? string.Empty,
                 CreateBy = Request.Form["CreateBy"].ToString() ?? string.Empty,
                 Like = 0,
                 Tag = Request.Form["Tag"].ToString() ?? string.Empty,
@@ -48,16 +48,26 @@ namespace CoreBlog.UI.Controllers
                 UserID="",
                 Watch=0
             };
-            _articleClient.InsertArticle(article);
-            return View();
+            if (article._id > 0)
+            {
+                _articleClient.UpdateArticle(article);
+            }
+            else
+            {
+                _articleClient.InsertArticle(article);
+            }
+            return View("ArticleListView");
         }
         #endregion
 
         #endregion
 
         #region 文章列表
-        public IActionResult ArticleListView()
+        public IActionResult ArticleListView(int page=0)
         {
+            var ArticleList= _articleClient.FindArticleByPage(0, 20);
+            ViewBag.Count = ArticleList.Key;
+            ViewBag.ArticleList = ArticleList.Value;
             return View();
         }
         #endregion

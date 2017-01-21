@@ -7,6 +7,6 @@ namespace CoreBlog.Model
 {
     public class BaseModel
     {
-        public string _id { get; set; }
+        public long _id { get; set; }
     }
 }

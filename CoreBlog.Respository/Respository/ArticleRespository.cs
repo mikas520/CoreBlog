@@ -1,4 +1,5 @@
 ﻿using CoreBlog.Model;
+using CoreBlog.Model.Query;
 using CoreBlog.Respository.IRespository;
 using System;
 using System.Collections.Generic;
@@ -24,7 +25,7 @@ namespace CoreBlog.Respository.Respository
         /// 删除
         /// </summary>
         /// <param name="obj"></param>
-        public long DeleteArticleByID(string id)
+        public long DeleteArticleByID(long id)
         {
            return MongoDBHelper.DeleteOne<Article>(id).DeletedCount;
         }
@@ -41,7 +42,7 @@ namespace CoreBlog.Respository.Respository
         /// <summary>
         /// 使用ID查询
         /// </summary>
-        public Article FindArticleByID(string id)
+        public Article FindArticleByID(long id)
         {
             return MongoDBHelper.FindByID<Article>(id);
         }
@@ -49,9 +50,9 @@ namespace CoreBlog.Respository.Respository
         /// <summary>
         /// 分页查询
         /// </summary>
-        public KeyValuePair<long,IList<Article>> FindArticleByPage(int size,int page)
+        public KeyValuePair<long,IList<Article>> FindArticleByPage(BaseQuery query)
         {
-           return MongoDBHelper.FindByPage<Article>(size:size,page:page);
+           return MongoDBHelper.FindByPage<Article>(query);
         }
     }
 

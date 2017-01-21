@@ -1,5 +1,6 @@
 ﻿using CoreBlog.Business.IClient;
 using CoreBlog.Model;
+using CoreBlog.Model.Query;
 using CoreBlog.Respository.IRespository;
 using CoreBlog.Respository.Respository;
 using System;
@@ -32,7 +33,7 @@ namespace CoreBlog.Business.Client
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public long DeleteArticleByID(string id)
+        public long DeleteArticleByID(long id)
         {
            return GetRespository().DeleteArticleByID(id);
         }
@@ -49,7 +50,7 @@ namespace CoreBlog.Business.Client
         /// <summary>
         /// 使用ID查询
         /// </summary>
-        public Article FindArticleByID(string id)
+        public Article FindArticleByID(long id)
         {
             return GetRespository().FindArticleByID(id);
         }
@@ -57,9 +58,9 @@ namespace CoreBlog.Business.Client
         /// <summary>
         /// 分页查询
         /// </summary>
-        public KeyValuePair<long, IList<Article>> FindArticleByPage(int size, int page)
+        public KeyValuePair<long, IList<Article>> FindArticleByPage(BaseQuery query)
         {
-            return GetRespository().FindArticleByPage(size,page);
+            return GetRespository().FindArticleByPage(query);
         }
     }
 }

@@ -1,4 +1,9 @@
-#:D:\CoreBlog\CoreBlog.UI\CoreBlog.UI.xproj
-D:\CoreBlog\CoreBlog.UI\CoreBlog.UI.xproj|D:\CoreBlog\CoreBlog.Business\CoreBlog.Business.xproj
-D:\CoreBlog\CoreBlog.Business\CoreBlog.Business.xproj|D:\CoreBlog\CoreBlog.Respository\CoreBlog.Respository.xproj
-D:\CoreBlog\CoreBlog.Respository\CoreBlog.Respository.xproj|D:\CoreBlog\CoreBlog.Model\CoreBlog.Model.xproj
+#:E:\Programme\CoreBlog\CoreBlog.Respository\CoreBlog.Respository.xproj
+E:\Programme\CoreBlog\CoreBlog.Respository\CoreBlog.Respository.xproj|E:\Programme\CoreBlog\CoreBlog.Model\CoreBlog.Model.xproj
+#:E:\Programme\CoreBlog\CoreBlog.UI\CoreBlog.UI.xproj
+E:\Programme\CoreBlog\CoreBlog.UI\CoreBlog.UI.xproj|E:\Programme\CoreBlog\CoreBlog.Business\CoreBlog.Business.xproj
+E:\Programme\CoreBlog\CoreBlog.Business\CoreBlog.Business.xproj|E:\Programme\CoreBlog\CoreBlog.Respository\CoreBlog.Respository.xproj
+E:\Programme\CoreBlog\CoreBlog.Respository\CoreBlog.Respository.xproj|E:\Programme\CoreBlog\CoreBlog.Model\CoreBlog.Model.xproj
+#:E:\Programme\CoreBlog\CoreBlog.Business\CoreBlog.Business.xproj
+E:\Programme\CoreBlog\CoreBlog.Business\CoreBlog.Business.xproj|E:\Programme\CoreBlog\CoreBlog.Respository\CoreBlog.Respository.xproj
+E:\Programme\CoreBlog\CoreBlog.Respository\CoreBlog.Respository.xproj|E:\Programme\CoreBlog\CoreBlog.Model\CoreBlog.Model.xproj

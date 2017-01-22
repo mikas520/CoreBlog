@@ -21,8 +21,7 @@
                 <button class="am-btn am-btn-secondary" type="submit">提交</button>
             </fieldset>
         </form>
-        <script src="http://ueditor.baidu.com/ueditor/ueditor.config.js"></script>
-        <script src="http://ueditor.baidu.com/ueditor/ueditor.all.js"></script>
+     
     </div>
     <div class="am-u-md-4 blog-sidebar">
         <br />
@@ -90,7 +89,11 @@
         </div>
     </div>
 </div>
+@section Scripts{
+<script src="http://ueditor.baidu.com/ueditor/ueditor.config.js"></script>
+<script src="http://ueditor.baidu.com/ueditor/ueditor.all.js"></script>
 <script>
+  
     $(function () {
         var $textArea = $('[name=myue');
         var editor = UE.getEditor('myue');
@@ -123,3 +126,4 @@
         });
     });
 </script>
+}

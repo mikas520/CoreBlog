@@ -1,30 +1,30 @@
-﻿
+﻿@using CoreBlog.Model;
+@{ 
+    var ArticleList = (IList<Article>)ViewBag.ArticleList;
+}
+
 <div class="am-g am-g-fixed blog-g-fixed">
     <div class="am-u-md-8">
-        @if (ViewBag.ArticleList != null)
+        @if (ArticleList != null)
         {
-            foreach (var item in ViewBag.ArticleList)
+            foreach (var item in ArticleList)
             {
                 <article class="blog-main">
                     <h3 class="am-article-title">
-                        <a href="#">@item.Title</a>
+                        @Html.ActionLink(item.Title, "ArticleDetailView",new { id = item._id })
+                        <a href="#"></a>
                     </h3>
                     <h4 class="am-article-meta blog-meta">
-                        by <a href="">@item.CreateBy</a> posted on @item.CreateOn under <a href="#">@item.Tag</a>
+                        by <a href="">@item.CreateBy</a>  @item.CreateOn Tag <a href="#">@item.Tag</a>
                     </h4>
-                    <div class="am-g blog-content">
-                        <div class="am-u-lg-7">
-                           @item.Content
-                        </div>
-                        <div class="am-u-lg-5">
-                            <p><img src="https://farm3.staticflickr.com/2917/14186214720_5d0b8ca2e3_b.jpg"></p>
-                        </div>
+                    <div class="am-g am-u-lg-12 blog-content">
+                           @Html.Raw(item.Content)
                     </div>
                 </article>
                 <hr class="am-article-divider blog-hr">
             }
         }
-        <div data-am-page="{pages:@ViewBag.Count,jump:'@Url.Action("ArticleListView")/%page%'}"></div>
+        <div id="page" data-am-page="{pages:@ViewBag.Count,jump:'/Article/ArticleListView/%page%'}"></div>
     </div>
     <div class="am-u-md-4 blog-sidebar">
         <br />
@@ -33,6 +33,12 @@
                 <div class="am-panel-hd">关于我</div>
                 <div class="am-panel-bd">
                     <p>
+                        <a href="~/Views/Article/ArticleDetailView.cshtml">~/Views/Article/ArticleDetailView.cshtml</a>
+                        Link:@Url.Link("dfs", null)<br/>
+                        Content:@Url.Content("~/dfdfsds/dsfdsf")<br />
+                        ToString:@this.Url.ToString()<br />
+                        Action:@this.Url.Action("ArticleListView",null)<br />
+                        RouteUrl:@Url.RouteUrl("ArticleListView")<br />
                         前所未有的中文云端字型服务，让您在 web 平台上自由使用高品质中文字体，跨平台、可搜寻，而且超美。云端字型是我们的事业，推广字型学知识是我们的志业。从字体出发，关心设计与我们的生活，justfont blog
                         正是為此而生。
                     </p>
@@ -92,3 +98,23 @@
         </div>
     </div>
 </div>
+@section Scripts{
+    <script src="~/lib/amazeui/dist/js/amazeui.page.js"></script>
+    <script>
+        $(function () {
+            $("#page").page({
+                pages:@ViewBag.Count,
+                curr:@Url.ActionContext.RouteData.Values["page"],
+                jump: "/Article/ArticleListView/%page%"
+                /*使用回调函数可以处理更复杂的逻辑
+                jump:function(context, first){
+                    if(!first){
+                        window.location.href = '?page='+context.option.curr;
+                    }
+                }        
+                */
+            })
+
+        })
+    </script>
+}

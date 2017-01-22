@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using CoreBlog.Model;
 using CoreBlog.Business.IClient;
+using CoreBlog.Business.Query;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -56,26 +57,39 @@ namespace CoreBlog.UI.Controllers
             {
                 _articleClient.InsertArticle(article);
             }
-            return View("ArticleListView");
+            return RedirectToAction("ArticleListView");
         }
         #endregion
 
         #endregion
 
         #region 文章列表
-        public IActionResult ArticleListView(int page=0)
+        public IActionResult ArticleListView(int page=1)
         {
-            var ArticleList= _articleClient.FindArticleByPage(0, 20);
-            ViewBag.Count = ArticleList.Key;
+            var query = new ArticleQuery() {
+                Count = true,
+                CreateOn = null,
+                PageNum=page,
+                Size=10,
+                Title="",
+                UserID=0,
+            };
+            var ArticleList= _articleClient.FindArticleByPage(query);
+            ViewBag.Count = (ArticleList.Key+ query.Size -1)/ query.Size;
             ViewBag.ArticleList = ArticleList.Value;
             return View();
         }
         #endregion
 
         #region 文章详情
-        public IActionResult ArticleDetailView()
+        public IActionResult ArticleDetailView(long id=0)
         {
-            return View();
+            if (id <= 0)
+            {
+               return View("ArticleListView");
+            }
+            var article= _articleClient.FindArticleByID(id);
+            return View(article);
         }
         #endregion
 

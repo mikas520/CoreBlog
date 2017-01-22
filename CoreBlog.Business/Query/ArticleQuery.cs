@@ -8,11 +8,12 @@ namespace CoreBlog.Business.Query
 {
     public class ArticleQuery : BaseQuery
     {
+        public long ID { get; set; }
         public long UserID { get; set; }
 
         public string Title { get; set; }
 
-        public DateTime CreateOn { get; set; }
+        public DateTime? CreateOn { get; set; }
 
         /// <summary>
         /// 
@@ -20,7 +21,26 @@ namespace CoreBlog.Business.Query
         /// <returns></returns>
         public override string GetQueryJson()
         {
-            throw new NotImplementedException();
+            string json = "{";
+            if (ID>0)
+            {
+                json += "_id:" + ID + ",";
+            }
+            if (!string.IsNullOrEmpty(Title))
+            {
+                json += "title:\""+Title+"\",";   
+            }
+            if (UserID>0)
+            {
+                json += "UserID:\"" + UserID + "\",";
+            }
+            if (CreateOn.HasValue)
+            {
+                json += "CreateOn:\"" + CreateOn + "\",";
+            }
+
+            json += "}";
+            return json;            
         }
 
         /// <summary>

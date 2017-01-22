@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.0",
-    "signature": "67b506fc517002781d84bcafb3c5b49d954d47e0"
+    "signature": "75ed7a4d70a437112068f4c12840f99c577fecb5"
   },
   "compilationOptions": {
     "defines": [
@@ -31,7 +31,8 @@
           "Microsoft.Extensions.Logging.Debug": "1.0.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
           "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0",
-          "CoreBlog.Business": "1.0.0"
+          "CoreBlog.Business": "1.0.0",
+          "ueditor": "1.2.2"
         },
         "runtime": {
           "CoreBlog.UI.dll": {}
@@ -1755,6 +1756,7 @@
           "lib/netstandard1.0/System.Text.Encodings.Web.dll": {}
         }
       },
+      "ueditor/1.2.2": {},
       "CoreBlog.Business/1.0.0": {
         "dependencies": {
           "CoreBlog.Respository": "1.0.0",
@@ -3965,6 +3967,11 @@
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-TWZnuiJgPDAEEUfobD7njXvSVR2Toz+jvKWds6yL4oSztmKQfnWzucczjzA+6Dv1bktBdY71sZW1YN0X6m9chQ=="
+    },
+    "ueditor/1.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gHSeofjmu+sd2FphLpbYqeqHI03ytp+3m5HF26rZmwGCpR+7JhvgD6p7vR3nY1+49cOkXLPiqHYj/AYo6kbg7A=="
     },
     "CoreBlog.Business/1.0.0": {
       "type": "project",

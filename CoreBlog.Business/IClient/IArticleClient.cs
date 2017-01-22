@@ -1,4 +1,6 @@
-﻿using CoreBlog.Model;
+﻿using CoreBlog.Business.Query;
+using CoreBlog.Model;
+using CoreBlog.Model.Query;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,6 +37,6 @@ namespace CoreBlog.Business.IClient
         /// <summary>
         /// 分页查询
         /// </summary>
-        KeyValuePair<long, IList<Article>> FindArticleByPage(int size, int page);
+        KeyValuePair<long, IList<Article>> FindArticleByPage(BaseQuery query);
     }
 }

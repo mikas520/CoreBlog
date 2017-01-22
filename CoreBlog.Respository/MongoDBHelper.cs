@@ -32,13 +32,13 @@ namespace CoreBlog.Respository
 
         public static KeyValuePair<long, IList<T>> FindByPage<T>(BaseQuery query)
         {
-            var list = Find<T>(query.GetQueryJson().ToBsonDocument(), null).Sort(query.GetSortJson());
+            var list = Find<T>(BsonDocument.Parse(query.GetQueryJson()), null).Sort(query.GetSortJson());
             long num = 0;
             if (query.Count)
             {
                 num = list.Count();
             }
-            return new KeyValuePair<long, IList<T>>(num, list.Skip(query.Size * query.PageNum).Limit(query.PageNum).ToList());
+            return new KeyValuePair<long, IList<T>>(num, list.Skip(query.Size * (query.PageNum-1)).Limit(query.Size).ToList());
         }
 
         #endregion

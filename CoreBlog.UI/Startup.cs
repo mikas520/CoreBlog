@@ -67,7 +67,7 @@ namespace CoreBlog.UI
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Article}/{action=ArticleListView}/{id?}");
+                    template: "{controller=Article}/{action=ArticleListView}/{page?}");
             });
         }
     }
